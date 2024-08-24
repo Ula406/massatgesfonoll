@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Massatges</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .product {
+            display: flex;
+            justify-content: space-between;
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product h3 {
+            margin: 0;
+        }
+        .product button {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #555;
+        }
+        .cart {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .cart h2 {
+            margin-top: 0;
+        }
+        .cart ul {
+            list-style: none;
+            padding: 0;
+        }
+        .cart li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .cart button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reserva el teu Massatge</h1>
+        
+        <div class="product">
+            <div>
+                <h3>Massatge Relaxant (30 min)</h3>
+                <p>Preu: 7,90€</p>
+            </div>
+            <button onclick="addToCart('Massatge Relaxant (30 min)', 7.90)">Afegeix al Carret</button>
+        </div>
+        
+        <div class="product">
+            <div>
+                <h3>Massatge Esportiu (45 min)</h3>
+                <p>Preu: 10,90€</p>
+            </div>
+            <button onclick="addToCart('Massatge Esportiu (45 min)', 10.90)">Afegeix al Carret</button>
+        </div>
+        
+        <div class="product">
+            <div>
+                <h3>Massatge Teràpia de Peus (15 min)</h3>
+                <p>Preu: 4,10€</p>
+            </div>
+            <button onclick="addToCart('Massatge Teràpia de Peus (15 min)', 4.10)">Afegeix al Carret</button>
+        </div>
+
+        <div class="cart">
+            <h2>El teu Carret</h2>
+            <ul id="cart-items">
+                <!-- Aquí es mostraran els productes afegits al carret -->
+            </ul>
+            <p><strong>Total:</strong> <span id="cart-total">0,00€</span></p>
+            <button onclick="checkout()">Reserva ara</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function addToCart(productName, productPrice) {
+            // Afegir el producte al carret
+            cart.push({ name: productName, price: productPrice });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            let total = 0;
+
+            // Netejar els elements del carret
+            cartItems.innerHTML = '';
+
+            // Afegir els productes al carret i calcular el total
+            cart.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - ${item.price.toFixed(2)}€`;
+                cartItems.appendChild(li);
+                total += item.price;
+            });
+
+            cartTotal.textContent = `${total.toFixed(2)}€`;
+        }
+
+        function checkout() {
+            if (cart.length > 0) {
+                alert('Gràcies per la teva reserva!');
+                cart = []; // Netejar el carret després de la reserva
+                updateCart();
+            } else {
+                alert('El teu carret està buit!');
+            }
+        }
+    </script>
+</body>
+</html>
