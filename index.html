@@ -148,6 +148,40 @@
                 <li><strong>Preu Targeta + Soci Girona FC:</strong> 4,80€</li>
             </ul>
         </section>
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bescanviar Codi de Descompte</title>
+</head>
+<body>
+
+    <h2>Introduïu el vostre codi de descompte</h2>
+    
+    <!-- Formulari per introduir el codi de descompte -->
+    <form id="discountForm" onsubmit="return bescanviarCodi()">
+        <label for="discountCode">Codi de Descompte:</label>
+        <input type="text" id="discountCode" name="discountCode" required>
+        <button type="submit">Bescanviar</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function bescanviarCodi() {
+            // Obtenció del codi de descompte introduït
+            var codi = document.getElementById("discountCode").value;
+            
+            // Aquí podries fer una validació del codi o enviar-lo a un servidor per verificar-lo
+            if (codi === "DESCOMPTE10") {
+                document.getElementById("result").innerText = "Codi de descompte vàlid! 10% de descompte aplicat.";
+            } else {
+                document.getElementById("result").innerText = "Codi de descompte no vàlid. Torneu-ho a intentar.";
+            }
+            
+            // Evitar que el formulari es reenvii realment
+            return false;
+        }
+    </script>
 
         <section class="contact">
         <h2>Contacte</h2>
