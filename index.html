@@ -5,6 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Massatges Fonoll</title>
     <style>
+        .contact {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    }
+    
+    .contact h2 {
+        color: #333;
+    }
+    
+    .contact ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .contact ul li {
+        margin: 10px 0;
+    }
+    
+    .contact form {
+        margin-top: 20px;
+    }
+    
+    .contact label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    
+    .contact input[type="text"],
+    .contact input[type="email"],
+    .contact textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    
+    .contact button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #5cb85c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .contact button:hover {
+        background-color: #4cae4c;
+    }
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -149,22 +203,25 @@
         </section>
 
         <section class="contact">
-            <h2>Reserves:</h2>
-
-            <h3>Gmail<h3>
-            <ul>
-                <li><strong>Gal·la:<strong> gal.larierafonoll@gmail.com</li>
-                <li><strong>Oleguer:</strong> oleguerrierafonoll@gmail.com</li>
-            <ul>
-            <h3>Telefon</h3>
-            <ul>
-                <li><strong>Oleguer:</strong> 633 919 877</li>
-            </ul>
-
+        <h2>Contacte</h2>
+        <p>Per a més informació o per reservar un massatge, ens pots contactar a través de les següents opcions:</p>
+        <ul>
+            <li>Telèfon: 123 456 789</li>
+            <li>Correu electrònic: <a href="mailto:info@massatgesrifo.com">info@massatgesrifo.com</a></li>
+            <li>Adreça: Carrer de l'Exemple, 123, Barcelona</li>
+        </ul>
+        <form action="#" method="post">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Correu electrònic:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Missatge:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+    
+            <button type="submit">Enviar</button>
+            </form>
         </section>
-    </div>
-    <footer>
-        <p>© 2024 Massatges Fonoll</p>
-    </footer>
-</body>
-</html>
+<body>
+<html>
