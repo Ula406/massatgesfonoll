@@ -186,13 +186,52 @@
         <section class="contact">
         <h2>Contacte</h2>
         <p>Per a més informació o per reservar un massatge, omple el següent formulari:</p>
-
-        <!-- Formulari de Google incrustat aquí -->
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdQ8Rx61l-M2tOlccdGUh0qRlBt7AXukN8mktTsuzQjeuTSAQ/viewform?embedded=true" width="100%" height="800" frameborder="40" marginheight="0" marginwidth="0">Carregant... Si us plau esperi...</iframe>
-    </section>
-    <footer>
-        <img style="width: 100%" scr="https://massatgesfonoll.netlify.app/massatges.png">
-    </footer>
+<form name="reserva-massatges" method="POST" data-netlify="true">
+        <!-- Adreça electrònica -->
+        <label for="email">Adreça electrònica *</label>
+        <input type="email" id="email" name="email" required>
+        
+        <!-- Temps (Opcions Úniques) -->
+        <fieldset>
+            <legend>Temps</legend>
+            <label><input type="radio" name="temps" value="10 minuts - 3,50€" required> 10 minuts - 3,50€</label><br>
+            <label><input type="radio" name="temps" value="15 minuts - 4,10€"> 15 minuts - 4,10€</label><br>
+            <label><input type="radio" name="temps" value="30 minuts - 7,90€"> 30 minuts - 7,90€</label><br>
+            <label><input type="radio" name="temps" value="45 minuts - 10,90€"> 45 minuts - 10,90€</label>
+        </fieldset>
+        
+        <!-- Suplements (Opcions Múltiples) -->
+        <fieldset>
+            <legend>Suplements</legend>
+            <label><input type="checkbox" name="suplements" value="Coixí - 1,00€"> Coixí - 1,00€</label><br>
+            <label><input type="checkbox" name="suplements" value="Ventilador - 1,50€"> Ventilador - 1,50€</label><br>
+            <label><input type="checkbox" name="suplements" value="Extra 5 minuts cap - 0,90€"> Extra 5 minuts cap - 0,90€</label><br>
+            <label><input type="checkbox" name="suplements" value="Sessió de 5 fotos - 4,30€"> Extra 5 minuts esquena - 0,90€</label>
+            <label><input type="checkbox" name="suplements" value="Sessió de 10 fotos - 8,20€"> Sessió de 10 fotos - 8,20€</label><br>
+            <label><input type="checkbox" name="suplements" value="Sessió de 5 fotos - 4,30€"> Sessió de 5 fotos - 4,30€</label>
+        </fieldset>
+        
+        <!-- Refrescos (Opcions Úniques) -->
+        <fieldset>
+            <legend>Refrescos</legend>
+            <label><input type="radio" name="refrescos" value="Llauna Coca-Cola - 2,50€"> Llauna Coca-Cola - 2,50€</label><br>
+            <label><input type="radio" name="refrescos" value="Llauna Fanta Llimona - 2,50€"> Llauna Fanta Llimona - 2,50€</label><br>
+            <label><input type="radio" name="refrescos" value="Llauna Fanta Taronja - 2,50€"> Llauna Fanta Taronja - 2,50€</label><br>
+            <label><input type="radio" name="refrescos" value="Llauna Nestea - 2,50€"> Llauna Nestea - 2,50€</label><br>
+            <label><input type="radio" name="refrescos" value="Got Aigua - 0,40€"> Got Aigua - 0,40€</label>
+        </fieldset>
+        
+        <!-- Ofertes (Opcions Úniques) -->
+        <fieldset>
+            <legend>Ofertes</legend>
+            <label><input type="radio" name="ofertes" value="Pack Gran - 8,00€ | 6,65€"> Pack Gran - 8,00€ | 6,65€</label><br>
+            <label><input type="radio" name="ofertes" value="Pack Espulgurí - 7,10€ | 5,50€"> Pack Espulgurí - 7,10€ | 5,50€</label><br>
+            <label><input type="radio" name="ofertes" value="Pack Gironí - 12,50€ | 8,50€ | 8,10€ | 4,80€"> Pack Gironí - 12,50€ | 8,50€ | 8,10€ | 4,80€</label>
+        </fieldset>
+        
+        <!-- Botó d'enviament -->
+        <button type="submit">Reservar</button>
+    </form>
 </body>
 </html>
 
