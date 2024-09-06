@@ -69,13 +69,8 @@
             <h2>Carret de Compra</h2>
             <div id="cartItems"></div>
             <p id="total">Total: 0.00€</p>
-            <button class="close-btn" onclick="toggleCartPopup()">Tancar</button>
+            <button class="close-btn" onclick="toggleCartPopup()">RESERVAR</button>
         </div>
-
-        <!-- Botons per afegir productes al carret -->
-        <button onclick="addToCart('Massatge 10 minuts', 2.50)">Afegir Massatge 10 min</button>
-        <button onclick="addToCart('Coca-Cola', 2.50)">Afegir Coca-Cola</button>
-
         <!-- Incloure l'script -->
         <script src="cart.js"></script>
 
@@ -107,18 +102,65 @@
                 <h2>Preus Normals</h2>
                 <li>
                     <div class="item-container">
-                        <span>15 minuts - 3,50€</span>
-                        <button onclick="addToCart('Massatge 15 Minuts', 3.50)">Afegir al Carret</button>
+                        <span>5 minuts - 2,10€</span>
+                        <button onclick="addToCart('Massatge 5 Minuts', 2.10)">Afegir al Carret</button>
                     </div>
                 </li>
-                <li>15 minuts - 4,10€</li>
-                <li>30 minuts - 7,90€</li>
-                <li>45 minuts - 10,90€</li>
+                <li>
+                    <div class="item-container">
+                        <span>10 minuts - 3,50€</span>
+                        <button onclick="addToCart('Massatge 10 Minuts', 3.50)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-container">
+                        <span>15 minuts - 4,90€</span>
+                        <button onclick="addToCart('Massatge 15 Minuts', 4.90)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-container">
+                        <span>30 minuts - 7,90€</span>
+                        <button onclick="addToCart('Massatge 30 Minuts', 7.90)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-container">
+                        <span>45 minuts - 10,90€</span>
+                        <button onclick="addToCart('Massatge 45 Minuts', 10.90)">Afegir al Carret</button>
+                    </div>
+                </li>
                 <h2>Preus Targeta</h2>
-                <li>10 minuts - 2,50€</li>
-                <li>15 minuts - 3,10€</li>
-                <li>30 minuts - 6,90€</li>
-                <li>45 minuts - 9,90€</li>
+                <li>
+                    <div class="item-container">
+                        <span>5 minuts - 1,10€</span>
+                        <button onclick="addToCart('Massatge 5 Minuts', 1.10)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-container">
+                        <span>10 minuts - 2,50€</span>
+                        <button onclick="addToCart('Massatge 10 Minuts', 2.50)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-container">
+                        <span>15 minuts - 3,90€</span>
+                        <button onclick="addToCart('Massatge 15 Minuts', 3.90)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-container">
+                        <span>30 minuts - 6,90€</span>
+                        <button onclick="addToCart('Massatge 30 Minuts', 6.90)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-container">
+                        <span>45 minuts - 9,90€</span>
+                        <button onclick="addToCart('Massatge 45 Minuts', 9.90)">Afegir al Carret</button>
+                    </div>
+                </li>
             </ul>
         </section>
 
@@ -126,28 +168,129 @@
             <img style="width: 100%" src="imatges/seccions/suplements.png">
             <ul>
                 <h2>Clàssics</h2>
-                <li>Coixí - 1€</li>
-                <li>Ventilador - 1,50€</li>
-                <li>Extra 5 minuts cap - 0,90€</li>
-                <li>Extra 5 minuts cul - 2,50€</li>
-                <li>Extra 5 minuts esquena - 0,90€</li>
-                <li>Extra 5 minuts canell - 0,90€</li>
-                <li>Extra 5 minuts peus - 1,10€</li>
-                <li>Extra 1 minut moto - 0,50€</li>
-                <li>Extra 10 minuts tot - 1,70€</li>
-                <li>Massetjador 2 potes - 0,10€</li>
-                <li>Massetjador 4 potes - 0,20€</li>
-                <li>Música relaxant - 0,15€</li>
-                <li>Música Reggaeton - 3,55€</li>
-                <li>Tovallola Humida - 0,30€</li>
-                <li>Triar Lloc - 0,25€</li>
-
-                <h2>Nous</h2>
-                <li>Audio Llibre a escollir - 2,50€</li>
-                <li>Servei de Pentinar - 2,90€</li>
-                <li>Sessió de 10 fotos - 8,20€</li>
-                <li>Sessió de 5 fotos - 4,30€</li>
-                <li>Suplement Sorra Màgica - 2,10€</li>
+                <li>
+                    <div class="item-container">
+                              <span>Coixí - 1€</span>
+                              <button onclick="addToCart('Coixí', 1.00)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Ventilador - 1,50€</span>
+                              <button onclick="addToCart('Ventilador', 1.50)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Extra 5 minuts cap - 0,90€</span>
+                              <button onclick="addToCart('Extra 5 minuts cap', 0.90)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Extra 5 minuts cul - 2,50€</span>
+                              <button onclick="addToCart('Extra 5 minuts cul', 2.50)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Extra 5 minuts esquena - 0,90€</span>
+                              <button onclick="addToCart('Extra 5 minuts esquena', 0.90)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Extra 5 minuts canell - 0,90€</span>
+                              <button onclick="addToCart('Extra 5 minuts canell', 0.90)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Extra 5 minuts peus - 1,10€</span>
+                              <button onclick="addToCart('Extra 5 minuts peus', 1.10)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Extra 1 minut moto - 0,50€</span>
+                              <button onclick="addToCart('Extra 1 minut moto', 0.50)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Extra 10 minuts tot - 1,70€</span>
+                              <button onclick="addToCart('Extra 10 minuts tot', 1.70)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Massetjador 2 potes - 0,10€</span>
+                              <button onclick="addToCart('Massetjador 2 potes', 0.10)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Massetjador 4 potes - 0,20€</span>
+                              <button onclick="addToCart('Massetjador 4 potes', 0.20)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Música relaxant - 0,15€</span>
+                              <button onclick="addToCart('Música relaxant', 0.15)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Música Reggaeton - 3,55€</span>
+                              <button onclick="addToCart('Música Reggaeton', 3.55)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Tovallola Humida - 0,30€</span>
+                              <button onclick="addToCart('Tovallola Humida', 0.30)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Triar Lloc - 0,25€</span>
+                              <button onclick="addToCart('Triar Lloc', 0.25)">Afegir al Carret</button>
+                     </div>
+               </li>
+               
+               <h2>Nous</h2>
+               
+               <li>
+                    <div class="item-container">
+                              <span>Audio Llibre a escollir - 2,50€</span>
+                              <button onclick="addToCart('Audio Llibre a escollir', 2.50)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Servei de Pentinar - 2,90€</span>
+                              <button onclick="addToCart('Servei de Pentinar', 2.90)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Sessió de 10 fotos - 8,20€</span>
+                              <button onclick="addToCart('Sessió de 10 fotos', 8.20)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Sessió de 5 fotos - 4,30€</span>
+                              <button onclick="addToCart('Sessió de 5 fotos', 4.30)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Suplement Sorra Màgica - 2,10€</span>
+                              <button onclick="addToCart('Suplement Sorra Màgica', 2.10)">Afegir al Carret</button>
+                     </div>
+               </li>
             </ul>
         </section>
 
@@ -156,33 +299,148 @@
             <ul>
             <h2>Refrescos</h2>
             <ul>
-                <li>Llauna Coca-Cola - 2,50€</li>
-                <li>Llauna Fanta Llimona - 2,50€</li>
-                <li>Llauna Fanta Taronja - 2,50 €</li>
-                <li>Llauna Nestea - 2,50€</li>
-                <li>Got Aigua - 0,40€</li>
-                <li>Llauna Estrella Damm - 3,30€</li>
-                <li>Llauna Voll-Damm - 3,30€</li>
-                <li>Llauna Damm Lemon - 3,30€</li>
+                <li>
+                    <div class="item-container">
+                              <span>Llauna Coca-Cola - 2,50€</span>
+                              <button onclick="addToCart('Llauna Coca-Cola', 2.50)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Llauna Fanta Llimona - 2,50€</span>
+                              <button onclick="addToCart('Llauna Fanta Llimona', 2.50)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Llauna Fanta Taronja - 2,50€</span>
+                              <button onclick="addToCart('Llauna Fanta Taronja', 2.50)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Llauna Nestea - 2,50€</span>
+                              <button onclick="addToCart('Llauna Nestea', 2.50)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Got Aigua - 0,40€</span>
+                              <button onclick="addToCart('Got Aigua', 0.40)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Llauna Estrella Damm - 3,30€</span>
+                              <button onclick="addToCart('Llauna Estrella Damm', 3.30)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Llauna Voll-Damm - 3,30€</span>
+                              <button onclick="addToCart('Llauna Voll-Damm', 3.30)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Llauna Damm Lemon - 3,30€</span>
+                              <button onclick="addToCart('Llauna Damm Lemon', 3.30)">Afegir al Carret</button>
+                     </div>
+               </li>               
             <ul>
                 <h2 style="display: inline-block; vertical-align: middle;">Menjar</h2>
                 <img style="width: 80px; height: auto; float: right; margin-left: 0;" src="imatges/altres/discount10.png">
             <ul>
-                <li>Patates Lay's</li>
-                <li>Patates Lay's Campesinas</li>
-                <li>Patates Lay's Ketchup</li>
-                <li>Olives</li>
-                <li>Fuet</li>
-                <li>Formatge</li>
-                <li>Pernil Salat</li>
-                <li>Pernil Dolç</li>
-                <li>Mix Tot</li>
-                <li>Especial de Tonyina</li>
-                <li>Crispetes</li>
-                <li>Xocolata Desfeta</li>
-                <li>Colacao</li>
-                <li>Barreja d'Embotits</li>
-                <li>Cocteleo</li>
+                <li>
+                    <div class="item-container">
+                              <span>Patates Lay's - 1,50€</span>
+                              <button onclick="addToCart('Patates Lay\'s', 1.50)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Patates Lay's Campesinas - 1,50€</span>
+                              <button onclick="addToCart('Patates Lay\'s Campesinas', 1.50)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Patates Lay's Ketchup - 1,50€</span>
+                              <button onclick="addToCart('Patates Lay\'s Ketchup', 1.50)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Olives - 1,20€</span>
+                              <button onclick="addToCart('Olives', 1.20)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Fuet - 2,00€</span>
+                              <button onclick="addToCart('Fuet', 2.00)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Formatge - 2,50€</span>
+                              <button onclick="addToCart('Formatge', 2.50)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Pernil Salat - 2,90€</span>
+                              <button onclick="addToCart('Pernil Salat', 2.90)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Pernil Dolç - 2,50€</span>
+                              <button onclick="addToCart('Pernil Dolç', 2.50)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Mix Tot - 3,00€</span>
+                              <button onclick="addToCart('Mix Tot', 3.00)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Especial de Tonyina - 3,50€</span>
+                              <button onclick="addToCart('Especial de Tonyina', 3.50)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Crispetes - 1,80€</span>
+                              <button onclick="addToCart('Crispetes', 1.80)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Xocolata Desfeta - 2,00€</span>
+                              <button onclick="addToCart('Xocolata Desfeta', 2.00)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Colacao - 1,20€</span>
+                              <button onclick="addToCart('Colacao', 1.20)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Barreja d'Embotits - 4,00€</span>
+                              <button onclick="addToCart('Barreja d\'Embotits', 4.00)">Afegir al Carret</button>
+                     </div>
+               </li>
+               <li>
+                    <div class="item-container">
+                              <span>Cocteleo - 1,50€</span>
+                              <button onclick="addToCart('Cocteleo', 1.50)">Afegir al Carret</button>
+                     </div>
+               </li>               
             </ul>
         </section>
 
@@ -194,7 +452,14 @@
                 <li>Massatge 15 minuts</li>
                 <li>Massatge 15 minuts</li>
                 <li>Música Relaxant</li>
-                <li><strong>Preu:</strong> 8,00€ | <strong>Preu Targeta:</strong> 6,65€</li>
+                <li>
+                    <div class="item-container">
+                              <span><strong>Preu:</strong> 8,00€ </span>
+                              <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
+                              <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
+                              <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
+                     </div>
+               </li>
             </ul>
             <p><em>* Cada massatge de 15 minuts és per una persona diferent.</em></p>
             <p><em>* La música és aleatòria.</em></p>
@@ -208,7 +473,14 @@
                 <li>Música Relaxant</li>
                 <li>Entrada Sorteig</li>
                 <li>AudioLlibre a escollir</li>
-                <li><strong>Preu:</strong> 7,10€ | <strong>Preu Targeta:</strong> 5,50€</li>
+                <li>
+                    <div class="item-container">
+                              <span><strong>Preu:</strong> 8,00€ </span>
+                              <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
+                              <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
+                              <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
+                     </div>
+               </li>
             </ul>
             <p><em>* Només per nascuts a l'Espluga.</em></p>
             <p>-------</p>
@@ -223,10 +495,14 @@
                 <li>Aigua Freda</li>
                 <li>Tovallola Humida (calenta o freda)</li>
                 <li>Ventilador</li>
-                <li><strong>Preu Normal:</strong> 12,50€</li>
-                <li><strong>Preu Targeta:</strong> 8,50€</li>
-                <li><strong>Preu Soci Girona FC:</strong> 8,10€</li>
-                <li><strong>Preu Targeta + Soci Girona FC:</strong> 4,80€</li>
+                <li>
+                    <div class="item-container">
+                              <span><strong>Preu:</strong> 8,00€ </span>
+                              <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
+                              <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
+                              <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
+                     </div>
+               </li>
                 <p>-------</p>
             </ul>
         </section>
@@ -235,7 +511,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bescanviar Codi de Descompte</title>
         <section class="discount"
-    <h2>Introduïu el vostre codi de descompte</h2>
+    <h1>Introduïu el vostre codi de descompte</h1>
     
     <!-- Formulari per introduir el codi de descompte -->
     <form id="discountForm" onsubmit="return bescanviarCodi()">
@@ -243,9 +519,9 @@
         <input type="text" id="discountCode" name="discountCode" required>
         <button type="submit">Bescanviar</button>
     </form>
-
+</section>
     <p id="result"></p>
-
+<section class="reservation"
     <script>
         function bescanviarCodi() {
             // Obtenció del codi de descompte introduït
