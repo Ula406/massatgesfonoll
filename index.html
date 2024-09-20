@@ -30,7 +30,7 @@
             color:#333
         }
         }
-        .hours, .prices, .offers, .drink_shop, .addings, .discount, .contact, .shopping_cart {
+        .hours, .prices, .offers, .drink_shop, .addings, .discount, .contact, .shopping_cart, .reservation {
             background: #FFFFFF;
             padding: 20px;
             margin: 20px 0;
@@ -54,38 +54,46 @@
             padding: 10px 0;
             margin-top: 20px;
         }
+        .capçalera {
+            background-color: aqua;
+        }
     </style>
 </head>
 <body>
-    </header>
-        <img style="width: 100%" src="imatges/capçalera/IMG_3012_20240831_171916_0000.png">
+    <div class="capçalera" style="top:0; left:0; padding: 20px 20px 20px 20px; position: fixed; width: 100%; height:80px; display: flex; align-items: center;">
+        <h1 style="font-size: 60px;">Massatges Fonoll</h1>
+        <img src="imatges/carret_de_compra/popup/cart-icon.png">
+    </div>     
+    <div style="width: 100%;  margin-top: 120px;" >
+        <img src="imatges/capçalera/IMG_3012_20240831_171916_0000.png">
+    </div>
     <div class="container">
-    <section class="shopping_cart"
-            <!-- Icona del carret -->
-        <img src="imatges/carret_de_compra/popup/cart-icon.png" alt="Carret de Compra" class="cart-icon" onclick="toggleCartPopup()">
+        <section class="shopping_cart"
+                <!-- Icona del carret -->
+            <img src="imatges/carret_de_compra/popup/cart-icon.png" alt="Carret de Compra" class="cart-icon" onclick="toggleCartPopup()">
 
-        <!-- Popup del carret -->
-        <div id="cartPopup" class="cart-popup">
-            <h2>Carret de Compra</h2>
-            <div id="cartItems"></div>
-            <p id="total">Total: 0.00€</p>
-            <button class="close-btn" onclick="toggleCartPopup()">RESERVAR</button>
-        </div>
-        <!-- Incloure l'script -->
-        <script src="cart.js"></script>
+            <!-- Popup del carret -->
+            <div id="cartPopup" class="cart-popup">
+                <h2>Carret de Compra</h2>
+                <div id="cartItems"></div>
+                <p id="total">Total: 0.00€</p>
+                <button class="close-btn" onclick="toggleCartPopup()">RESERVAR</button>
+            </div>
+            <!-- Incloure l'script -->
+            <script src="cart.js"></script>
 
-        <script>
-            // Funció per mostrar o amagar el popup
-            function toggleCartPopup() {
-                var popup = document.getElementById("cartPopup");
-                if (popup.style.display === "none" || popup.style.display === "") {
-                    popup.style.display = "block";
-                } else {
-                    popup.style.display = "none";
+            <script>
+                // Funció per mostrar o amagar el popup
+                function toggleCartPopup() {
+                    var popup = document.getElementById("cartPopup");
+                    if (popup.style.display === "none" || popup.style.display === "") {
+                        popup.style.display = "block";
+                    } else {
+                        popup.style.display = "none";
+                    }
                 }
-            }
-        </script>
-    </section>
+            </script>
+        </section>
 
         <section class="hours">
             <img style="width: 100%" src="imatges/seccions/horari.png">
@@ -506,43 +514,40 @@
                 <p>-------</p>
             </ul>
         </section>
-        <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bescanviar Codi de Descompte</title>
         <section class="discount"
-    <h1>Introduïu el vostre codi de descompte</h1>
+            <h1>Introduïu el vostre codi de descompte</h1>
     
-    <!-- Formulari per introduir el codi de descompte -->
-    <form id="discountForm" onsubmit="return bescanviarCodi()">
-        <label for="discountCode">Codi de Descompte:</label>
-        <input type="text" id="discountCode" name="discountCode" required>
-        <button type="submit">Bescanviar</button>
-    </form>
-</section>
-    <p id="result"></p>
-<section class="reservation"
-    <script>
-        function bescanviarCodi() {
-            // Obtenció del codi de descompte introduït
-            var codi = document.getElementById("discountCode").value;
-            
-            // Aquí podries fer una validació del codi o enviar-lo a un servidor per verificar-lo
-            if (codi === "tinderlover") {
-                document.getElementById("result").innerText = "Codi de descompte vàlid! 10% de descompte aplicat.";
-            } else {
-                document.getElementById("result").innerText = "Codi de descompte no vàlid. Torneu-ho a intentar.";
-            }
-            
-            // Evitar que el formulari es reenvii realment
-            return false;
-        }
-    </script>
-        <h2>Contacte</h2>
-        <p>Per a més informació o per reservar un massatge, omple el següent formulari</p>
-    <form>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdQ8Rx61l-M2tOlccdGUh0qRlBt7AXukN8mktTsuzQjeuTSAQ/viewform?embedded=true" width="100%" height="500" frameborder="4" marginheight="0" marginwidth="2">Carregant...</iframe>
-    </form>
+            <!-- Formulari per introduir el codi de descompte -->
+            <form id="discountForm" onsubmit="return bescanviarCodi()">
+                <label for="discountCode">Codi de Descompte:</label>
+                <input type="text" id="discountCode" name="discountCode" required>
+                <button type="submit">Bescanviar</button>
+            </form>
         </section>
+        <p id="result"></p>
+        <section class="reservation">
+            <script>
+                function bescanviarCodi() {
+                    // Obtenció del codi de descompte introduït
+                    var codi = document.getElementById("discountCode").value;
+                    
+                    // Aquí podries fer una validació del codi o enviar-lo a un servidor per verificar-lo
+                    if (codi === "tinderlover") {
+                        document.getElementById("result").innerText = "Codi de descompte vàlid! 10% de descompte aplicat.";
+                    } else {
+                        document.getElementById("result").innerText = "Codi de descompte no vàlid. Torneu-ho a intentar.";
+                    }
+                    
+                    // Evitar que el formulari es reenvii realment
+                    return false;
+                }
+            </script>
+            <h2>Contacte</h2>
+            <p>Per a més informació o per reservar un massatge, omple el següent formulari</p>
+            <form>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdQ8Rx61l-M2tOlccdGUh0qRlBt7AXukN8mktTsuzQjeuTSAQ/viewform?embedded=true" width="100%" height="500" frameborder="4" marginheight="0" marginwidth="2">Carregant...</iframe>
+            </form>
+        </section>
+    </div>
 </body>
 </html>
