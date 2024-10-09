@@ -1,52 +1,75 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.5">
     <title>Massatges Fonoll</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+            /* Efecte de desplaçament suau */
+        }
+
         @font-face {
             font-family: 'Agrandir';
             src: url('fonts/agrandir.otf') format('opentype');
         }
+
         body {
             font-family: Agrandir, sans-serif;
-            line-height: 0,8;
+            line-height: 0, 8;
             margin: 0;
             padding: 0;
             background-color: #D5F9F9;
             color: #333;
         }
+
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
         }
+
         h2 {
             color: #333;
             display: inline-block;
             vertical-align: middle;
-        h1 {
-            color:#333
+
+            h1 {
+                color: #333
+            }
         }
-        }
-        .hours, .prices, .offers, .drink_shop, .addings, .discount, .contact, .shopping_cart, .reservation {
+
+        .hours,
+        .prices,
+        .offers,
+        .drink_shop,
+        .addings,
+        .discount,
+        .contact,
+        .shopping_cart,
+        .reservation {
             background: #FFFFFF;
             padding: 20px;
             margin: 20px 0;
             border-radius: 25px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         div {
             color: #333
         }
+
         ul {
             padding: 0;
         }
+
         ul li {
             padding: 5px 0;
             list-style-type: none;
         }
+
         footer {
             background-color: #333;
             color: #fff;
@@ -54,47 +77,30 @@
             padding: 10px 0;
             margin-top: 20px;
         }
-        .capçalera {
-            background-color: aqua;
-        }
     </style>
 </head>
+
 <body>
-    <div class="capçalera" style="top:0; left:0; padding: 20px 20px 20px 20px; position: fixed; width: 100%; height:80px; display: flex; align-items: center;">
-        <h1 style="font-size: 60px;">Massatges Fonoll</h1>
-        <img style="height:auto" src="imatges/carret_de_compra/popup/cart-icon.png">
-    </div>     
-    <div style="width: 100%;  margin-top: 120px;" >
-        <img src="imatges/capçalera/IMG_3012_20240831_171916_0000.png">
-    </div>
-    <div class="container">
-        <section class="shopping_cart"
-                <!-- Icona del carret -->
-            <img src="imatges/carret_de_compra/popup/cart-icon.png" alt="Carret de Compra" class="cart-icon" onclick="toggleCartPopup()">
-
-            <!-- Popup del carret -->
-            <div id="cartPopup" class="cart-popup">
-                <h2>Carret de Compra</h2>
-                <div id="cartItems"></div>
-                <p id="total">Total: 0.00€</p>
-                <button class="close-btn" onclick="toggleCartPopup()">RESERVAR</button>
+    <header>
+        <nav
+            style="top: 0; left: 0; background-position: left; background-image: url(imatges/capçalera/image-cover-massage-image-for-web-image-don\'t-use-for-comercial-use-all-rights-reserved.png); width: auto; color: white; height: 120px; padding: 0px 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h1 style="margin: 0; text-align: left; padding: 40px 40px 40px 40px; color:#FFFFFF">Massatges Fonoll
+                </h1>
             </div>
-            <!-- Incloure l'script -->
-            <script src="cart.js"></script>
-
-            <script>
-                // Funció per mostrar o amagar el popup
-                function toggleCartPopup() {
-                    var popup = document.getElementById("cartPopup");
-                    if (popup.style.display === "none" || popup.style.display === "") {
-                        popup.style.display = "block";
-                    } else {
-                        popup.style.display = "none";
-                    }
-                }
-            </script>
-        </section>
-
+            <ul style="list-style: none; display: flex; margin: 0; padding: 0;">
+                <li style="margin-left: 20px;"><a href="#cart" style="color: white; text-decoration: gold;">Carret de
+                        Compra</a></li>
+                <li style="margin-left: 20px;"><a href="#reservation"
+                        style="color: white; text-decoration: gold;">Contacte</a></li>
+                <li style="margin-left: 20px;"><a href="#about" style="color: white; text-decoration: gold;">Sobre
+                        Nosaltres</a></li>
+                <li style="margin-left: 20px;"><a href="#offers"
+                        style="color: white; text-decoration: gold;">Ofertes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
         <section class="hours">
             <img style="width: 100%" src="imatges/seccions/horari.png">
             <ul>
@@ -178,281 +184,284 @@
                 <h2>Clàssics</h2>
                 <li>
                     <div class="item-container">
-                              <span>Coixí - 1€</span>
-                              <button onclick="addToCart('Coixí', 1.00)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Coixí - 1€</span>
+                        <button onclick="addToCart('Coixí', 1.00)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Ventilador - 1,50€</span>
-                              <button onclick="addToCart('Ventilador', 1.50)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Ventilador - 1,50€</span>
+                        <button onclick="addToCart('Ventilador', 1.50)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Extra 5 minuts cap - 0,90€</span>
-                              <button onclick="addToCart('Extra 5 minuts cap', 0.90)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Extra 5 minuts cap - 0,90€</span>
+                        <button onclick="addToCart('Extra 5 minuts cap', 0.90)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Extra 5 minuts cul - 2,50€</span>
-                              <button onclick="addToCart('Extra 5 minuts cul', 2.50)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Extra 5 minuts cul - 2,50€</span>
+                        <button onclick="addToCart('Extra 5 minuts cul', 2.50)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Extra 5 minuts esquena - 0,90€</span>
-                              <button onclick="addToCart('Extra 5 minuts esquena', 0.90)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Extra 5 minuts esquena - 0,90€</span>
+                        <button onclick="addToCart('Extra 5 minuts esquena', 0.90)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Extra 5 minuts canell - 0,90€</span>
-                              <button onclick="addToCart('Extra 5 minuts canell', 0.90)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Extra 5 minuts canell - 0,90€</span>
+                        <button onclick="addToCart('Extra 5 minuts canell', 0.90)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Extra 5 minuts peus - 1,10€</span>
-                              <button onclick="addToCart('Extra 5 minuts peus', 1.10)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Extra 5 minuts peus - 1,10€</span>
+                        <button onclick="addToCart('Extra 5 minuts peus', 1.10)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Extra 1 minut moto - 0,50€</span>
-                              <button onclick="addToCart('Extra 1 minut moto', 0.50)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Extra 1 minut moto - 0,50€</span>
+                        <button onclick="addToCart('Extra 1 minut moto', 0.50)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Extra 10 minuts tot - 1,70€</span>
-                              <button onclick="addToCart('Extra 10 minuts tot', 1.70)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Extra 10 minuts tot - 1,70€</span>
+                        <button onclick="addToCart('Extra 10 minuts tot', 1.70)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Massetjador 2 potes - 0,10€</span>
-                              <button onclick="addToCart('Massetjador 2 potes', 0.10)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Massetjador 2 potes - 0,10€</span>
+                        <button onclick="addToCart('Massetjador 2 potes', 0.10)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Massetjador 4 potes - 0,20€</span>
-                              <button onclick="addToCart('Massetjador 4 potes', 0.20)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Massetjador 4 potes - 0,20€</span>
+                        <button onclick="addToCart('Massetjador 4 potes', 0.20)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Música relaxant - 0,15€</span>
-                              <button onclick="addToCart('Música relaxant', 0.15)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Música relaxant - 0,15€</span>
+                        <button onclick="addToCart('Música relaxant', 0.15)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Música Reggaeton - 3,55€</span>
-                              <button onclick="addToCart('Música Reggaeton', 3.55)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Música Reggaeton - 3,55€</span>
+                        <button onclick="addToCart('Música Reggaeton', 3.55)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Tovallola Humida - 0,30€</span>
-                              <button onclick="addToCart('Tovallola Humida', 0.30)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Tovallola Humida - 0,30€</span>
+                        <button onclick="addToCart('Tovallola Humida', 0.30)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Triar Lloc - 0,25€</span>
-                              <button onclick="addToCart('Triar Lloc', 0.25)">Afegir al Carret</button>
-                     </div>
-               </li>
-               
-               <h2>Nous</h2>
-               
-               <li>
+                        <span>Triar Lloc - 0,25€</span>
+                        <button onclick="addToCart('Triar Lloc', 0.25)">Afegir al Carret</button>
+                    </div>
+                </li>
+
+                <h2>Nous</h2>
+
+                <li>
                     <div class="item-container">
-                              <span>Audio Llibre a escollir - 2,50€</span>
-                              <button onclick="addToCart('Audio Llibre a escollir', 2.50)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Audio Llibre a escollir - 2,50€</span>
+                        <button onclick="addToCart('Audio Llibre a escollir', 2.50)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Servei de Pentinar - 2,90€</span>
-                              <button onclick="addToCart('Servei de Pentinar', 2.90)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Servei de Pentinar - 2,90€</span>
+                        <button onclick="addToCart('Servei de Pentinar', 2.90)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Sessió de 10 fotos - 8,20€</span>
-                              <button onclick="addToCart('Sessió de 10 fotos', 8.20)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Sessió de 10 fotos - 8,20€</span>
+                        <button onclick="addToCart('Sessió de 10 fotos', 8.20)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Sessió de 5 fotos - 4,30€</span>
-                              <button onclick="addToCart('Sessió de 5 fotos', 4.30)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
+                        <span>Sessió de 5 fotos - 4,30€</span>
+                        <button onclick="addToCart('Sessió de 5 fotos', 4.30)">Afegir al Carret</button>
+                    </div>
+                </li>
+                <li>
                     <div class="item-container">
-                              <span>Suplement Sorra Màgica - 2,10€</span>
-                              <button onclick="addToCart('Suplement Sorra Màgica', 2.10)">Afegir al Carret</button>
-                     </div>
-               </li>
+                        <span>Suplement Sorra Màgica - 2,10€</span>
+                        <button onclick="addToCart('Suplement Sorra Màgica', 2.10)">Afegir al Carret</button>
+                    </div>
+                </li>
             </ul>
         </section>
 
         <section class="drink_shop">
             <img style="width: 100%" src="imatges/seccions/botiga.png">
             <ul>
-            <h2>Refrescos</h2>
-            <ul>
-                <li>
-                    <div class="item-container">
-                              <span>Llauna Coca-Cola - 2,50€</span>
-                              <button onclick="addToCart('Llauna Coca-Cola', 2.50)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Llauna Fanta Llimona - 2,50€</span>
-                              <button onclick="addToCart('Llauna Fanta Llimona', 2.50)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Llauna Fanta Taronja - 2,50€</span>
-                              <button onclick="addToCart('Llauna Fanta Taronja', 2.50)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Llauna Nestea - 2,50€</span>
-                              <button onclick="addToCart('Llauna Nestea', 2.50)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Got Aigua - 0,40€</span>
-                              <button onclick="addToCart('Got Aigua', 0.40)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Llauna Estrella Damm - 3,30€</span>
-                              <button onclick="addToCart('Llauna Estrella Damm', 3.30)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Llauna Voll-Damm - 3,30€</span>
-                              <button onclick="addToCart('Llauna Voll-Damm', 3.30)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Llauna Damm Lemon - 3,30€</span>
-                              <button onclick="addToCart('Llauna Damm Lemon', 3.30)">Afegir al Carret</button>
-                     </div>
-               </li>               
-            <ul>
-                <h2 style="display: inline-block; vertical-align: middle;">Menjar</h2>
-                <img style="width: 80px; height: auto; float: right; margin-left: 0;" src="imatges/altres/discount10.png">
-            <ul>
-                <li>
-                    <div class="item-container">
-                              <span>Patates Lay's - 1,50€</span>
-                              <button onclick="addToCart('Patates Lay\'s', 1.50)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Patates Lay's Campesinas - 1,50€</span>
-                              <button onclick="addToCart('Patates Lay\'s Campesinas', 1.50)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Patates Lay's Ketchup - 1,50€</span>
-                              <button onclick="addToCart('Patates Lay\'s Ketchup', 1.50)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Olives - 1,20€</span>
-                              <button onclick="addToCart('Olives', 1.20)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Fuet - 2,00€</span>
-                              <button onclick="addToCart('Fuet', 2.00)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Formatge - 2,50€</span>
-                              <button onclick="addToCart('Formatge', 2.50)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Pernil Salat - 2,90€</span>
-                              <button onclick="addToCart('Pernil Salat', 2.90)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Pernil Dolç - 2,50€</span>
-                              <button onclick="addToCart('Pernil Dolç', 2.50)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Mix Tot - 3,00€</span>
-                              <button onclick="addToCart('Mix Tot', 3.00)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Especial de Tonyina - 3,50€</span>
-                              <button onclick="addToCart('Especial de Tonyina', 3.50)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Crispetes - 1,80€</span>
-                              <button onclick="addToCart('Crispetes', 1.80)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Xocolata Desfeta - 2,00€</span>
-                              <button onclick="addToCart('Xocolata Desfeta', 2.00)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Colacao - 1,20€</span>
-                              <button onclick="addToCart('Colacao', 1.20)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Barreja d'Embotits - 4,00€</span>
-                              <button onclick="addToCart('Barreja d\'Embotits', 4.00)">Afegir al Carret</button>
-                     </div>
-               </li>
-               <li>
-                    <div class="item-container">
-                              <span>Cocteleo - 1,50€</span>
-                              <button onclick="addToCart('Cocteleo', 1.50)">Afegir al Carret</button>
-                     </div>
-               </li>               
-            </ul>
+                <h2>Refrescos</h2>
+                <ul>
+                    <li>
+                        <div class="item-container">
+                            <span>Llauna Coca-Cola - 2,50€</span>
+                            <button onclick="addToCart('Llauna Coca-Cola', 2.50)">Afegir al Carret</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-container">
+                            <span>Llauna Fanta Llimona - 2,50€</span>
+                            <button onclick="addToCart('Llauna Fanta Llimona', 2.50)">Afegir al Carret</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-container">
+                            <span>Llauna Fanta Taronja - 2,50€</span>
+                            <button onclick="addToCart('Llauna Fanta Taronja', 2.50)">Afegir al Carret</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-container">
+                            <span>Llauna Nestea - 2,50€</span>
+                            <button onclick="addToCart('Llauna Nestea', 2.50)">Afegir al Carret</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-container">
+                            <span>Got Aigua - 0,40€</span>
+                            <button onclick="addToCart('Got Aigua', 0.40)">Afegir al Carret</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-container">
+                            <span>Llauna Estrella Damm - 3,30€</span>
+                            <button onclick="addToCart('Llauna Estrella Damm', 3.30)">Afegir al Carret</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-container">
+                            <span>Llauna Voll-Damm - 3,30€</span>
+                            <button onclick="addToCart('Llauna Voll-Damm', 3.30)">Afegir al Carret</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-container">
+                            <span>Llauna Damm Lemon - 3,30€</span>
+                            <button onclick="addToCart('Llauna Damm Lemon', 3.30)">Afegir al Carret</button>
+                        </div>
+                    </li>
+                    <ul>
+                        <h2 style="display: inline-block; vertical-align: middle;">Menjar</h2>
+                        <img style="width: 80px; height: auto; float: right; margin-left: 0;"
+                            src="imatges/altres/discount10.png">
+                        <ul>
+                            <li>
+                                <div class="item-container">
+                                    <span>Patates Lay's - 1,50€</span>
+                                    <button onclick="addToCart('Patates Lay\'s', 1.50)">Afegir al Carret</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <span>Patates Lay's Campesinas - 1,50€</span>
+                                    <button onclick="addToCart('Patates Lay\'s Campesinas', 1.50)">Afegir al
+                                        Carret</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <span>Patates Lay's Ketchup - 1,50€</span>
+                                    <button onclick="addToCart('Patates Lay\'s Ketchup', 1.50)">Afegir al
+                                        Carret</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <span>Olives - 1,20€</span>
+                                    <button onclick="addToCart('Olives', 1.20)">Afegir al Carret</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <span>Fuet - 2,00€</span>
+                                    <button onclick="addToCart('Fuet', 2.00)">Afegir al Carret</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <span>Formatge - 2,50€</span>
+                                    <button onclick="addToCart('Formatge', 2.50)">Afegir al Carret</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <span>Pernil Salat - 2,90€</span>
+                                    <button onclick="addToCart('Pernil Salat', 2.90)">Afegir al Carret</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <span>Pernil Dolç - 2,50€</span>
+                                    <button onclick="addToCart('Pernil Dolç', 2.50)">Afegir al Carret</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <span>Mix Tot - 3,00€</span>
+                                    <button onclick="addToCart('Mix Tot', 3.00)">Afegir al Carret</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <span>Especial de Tonyina - 3,50€</span>
+                                    <button onclick="addToCart('Especial de Tonyina', 3.50)">Afegir al Carret</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <span>Crispetes - 1,80€</span>
+                                    <button onclick="addToCart('Crispetes', 1.80)">Afegir al Carret</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <span>Xocolata Desfeta - 2,00€</span>
+                                    <button onclick="addToCart('Xocolata Desfeta', 2.00)">Afegir al Carret</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <span>Colacao - 1,20€</span>
+                                    <button onclick="addToCart('Colacao', 1.20)">Afegir al Carret</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <span>Barreja d'Embotits - 4,00€</span>
+                                    <button onclick="addToCart('Barreja d\'Embotits', 4.00)">Afegir al Carret</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <span>Cocteleo - 1,50€</span>
+                                    <button onclick="addToCart('Cocteleo', 1.50)">Afegir al Carret</button>
+                                </div>
+                            </li>
+                        </ul>
         </section>
 
-        <section class="offers">
+        <section id="offers" class="offers">
             <img style="width: 100%" src="imatges/seccions/ofertes.png">
             <p>-------</p>
             <h2>Pack Gran</h2>
@@ -462,12 +471,12 @@
                 <li>Música Relaxant</li>
                 <li>
                     <div class="item-container">
-                              <span><strong>Preu:</strong> 8,00€ </span>
-                              <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
-                              <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
-                              <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
-                     </div>
-               </li>
+                        <span><strong>Preu:</strong> 8,00€ </span>
+                        <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
+                        <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
+                        <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
+                    </div>
+                </li>
             </ul>
             <p><em>* Cada massatge de 15 minuts és per una persona diferent.</em></p>
             <p><em>* La música és aleatòria.</em></p>
@@ -483,19 +492,19 @@
                 <li>AudioLlibre a escollir</li>
                 <li>
                     <div class="item-container">
-                              <span><strong>Preu:</strong> 8,00€ </span>
-                              <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
-                              <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
-                              <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
-                     </div>
-               </li>
+                        <span><strong>Preu:</strong> 8,00€ </span>
+                        <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
+                        <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
+                        <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
+                    </div>
+                </li>
             </ul>
             <p><em>* Només per nascuts a l'Espluga.</em></p>
             <p>-------</p>
 
-                <h2 style="display: inline-block; vertical-align: middle;">Pack Gironí</h2>
-                <img style="width: 80px; height: auto; float: right; margin-left: 0;" src="imatges/altres/discount10.png">
-                <ul>
+            <h2 style="display: inline-block; vertical-align: middle;">Pack Gironí</h2>
+            <img style="width: 80px; height: auto; float: right; margin-left: 0;" src="imatges/altres/discount10.png">
+            <ul>
                 <li>Massatge 30 minuts</li>
                 <li>Extra 5 minuts cap</li>
                 <li>Extra 5 minuts esquena</li>
@@ -505,49 +514,81 @@
                 <li>Ventilador</li>
                 <li>
                     <div class="item-container">
-                              <span><strong>Preu:</strong> 8,00€ </span>
-                              <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
-                              <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
-                              <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
-                     </div>
-               </li>
+                        <span><strong>Preu:</strong> 8,00€ </span>
+                        <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
+                        <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
+                        <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
+                    </div>
+                </li>
                 <p>-------</p>
             </ul>
         </section>
-        <section class="discount"
-            <h1>Introduïu el vostre codi de descompte</h1>
-    
+        <section class="discount" <h1>Introduïu el vostre codi de descompte</h1>
+
             <!-- Formulari per introduir el codi de descompte -->
             <form id="discountForm" onsubmit="return bescanviarCodi()">
                 <label for="discountCode">Codi de Descompte:</label>
                 <input type="text" id="discountCode" name="discountCode" required>
                 <button type="submit">Bescanviar</button>
             </form>
-        </section>
-        <p id="result"></p>
-        <section class="reservation">
             <script>
                 function bescanviarCodi() {
                     // Obtenció del codi de descompte introduït
                     var codi = document.getElementById("discountCode").value;
-                    
+
                     // Aquí podries fer una validació del codi o enviar-lo a un servidor per verificar-lo
                     if (codi === "tinderlover") {
                         document.getElementById("result").innerText = "Codi de descompte vàlid! 10% de descompte aplicat.";
                     } else {
                         document.getElementById("result").innerText = "Codi de descompte no vàlid. Torneu-ho a intentar.";
                     }
-                    
+
                     // Evitar que el formulari es reenvii realment
                     return false;
                 }
             </script>
+            <p id="result"></p>
+        </section>
+
+        <section id="cart" class="shopping_cart" <!-- Icona del carret -->
+            <img style="height: 25px" src="imatges/carret_de_compra/popup/cart-icon.png" alt="Carret de Compra"
+                class="cart-icon" onclick="toggleCartPopup()">
+
+            <!-- Popup del carret -->
+            <div id="cartPopup" class="cart-popup">
+                <h2>Carret de Compra</h2>
+                <div id="cartItems"></div>
+                <p id="total">Total: 0.00€</p>
+                <button class="close-btn" onclick="toggleCartPopup()">RESERVAR</button>
+            </div>
+            <!-- Incloure l'script -->
+            <script src="cart.js"></script>
+
+            <script>
+                // Funció per mostrar o amagar el popup
+                function toggleCartPopup() {
+                    var popup = document.getElementById("cartPopup");
+                    if (popup.style.display === "none" || popup.style.display === "") {
+                        popup.style.display = "block";
+                    } else {
+                        popup.style.display = "none";
+                    }
+                }
+            </script>
+        </section>
+
+<!-- CODI FORMULARI DE GOOGLE PER SI NO ES POT FER DESDE EL BOTÓ DE RESERVAR.
+        <section class="reservation">
             <h2>Contacte</h2>
             <p>Per a més informació o per reservar un massatge, omple el següent formulari</p>
             <form>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdQ8Rx61l-M2tOlccdGUh0qRlBt7AXukN8mktTsuzQjeuTSAQ/viewform?embedded=true" width="100%" height="500" frameborder="4" marginheight="0" marginwidth="2">Carregant...</iframe>
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdQ8Rx61l-M2tOlccdGUh0qRlBt7AXukN8mktTsuzQjeuTSAQ/viewform?embedded=true"
+                    width="100%" height="500" frameborder="4" marginheight="0" marginwidth="2">Carregant...</iframe>
             </form>
-        </section>
+        </section>   
+-->
     </div>
 </body>
+
 </html>
