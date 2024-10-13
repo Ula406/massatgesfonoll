@@ -1,6 +1,94 @@
-<h1 style="font-size: 4em">Aquesta Pàgina Encara Està En Desenvolupament...</h1>
-<p style="padding: 0px 0px 0px 0px">Però us deixem un video d'ocells perquè us entretingueu.</p>
-<video width="640" height="360" controls>
-    <source src="videos/video-reserve.mp4" type="video/mp4">
-    El teu navegador no suporta la reproducció de vídeos.
-  </video>
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Massatges Fonoll - Reserva</title>
+    <link rel="icon" href="imatges/favicon/m.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #666;
+            width: 80%;
+        }
+        input, select, textarea {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 80%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #999;
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1 style="margin: 0; font-size: 2.61em; text-align: left; padding: 40px 40px 40px 40px; color:#FFFFFF">Massatges Fonoll
+                </h1>
+            </div>
+            <ul style="list-style: none; display: flex; margin: 0; padding: 0;">
+                <li style="margin-left: 20px;"><a href="#cart" style="color: white; text-decoration: gold;">Carret de Compra</a></li>
+                <li style="margin-left: 20px;"><a href="#contact" style="color: white; text-decoration: gold;">Contacte</a></li>
+                <li style="margin-left: 20px;"><a href="our-history.html" style="color: white; text-decoration: gold;">La nostra Història</a></li>
+                <li style="margin-left: 20px;"><a href="offers.html" style="color: white; text-decoration: gold;">Ofertes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+      <section class="RoundedSection">
+        <div>
+          <h2>Fes la teva reserva</h2>
+          <form action="/submit-reserva" method="POST">
+              <label for="nom">Nom complet</label>
+              <input type="text" id="nom" name="nom" required>
+
+              <label for="email">Correu electrònic</label>
+              <input type="email" id="email" name="email" required>
+
+              <label for="telefon">Telèfon</label>
+              <input type="tel" id="telefon" name="telefon" required>
+
+              <label for="data">Data de la reserva</label>
+              <input type="date" id="data" name="data" required>
+
+              <label for="hora">Hora de la reserva</label>
+              <input type="time" id="hora" name="hora" required>
+
+              <label for="persones">Nombre de persones</label>
+              <select id="persones" name="persones">
+                  <option value="1">1 persona</option>
+                  <option value="2">2 persones</option>
+                  <option value="3">3 persones</option>
+                  <option value="4">4 persones</option>
+                  <option value="5">5 persones</option>
+                  <option value="6+">6 o més persones</option>
+              </select>
+
+              <label for="notes">Comentaris o requeriments especials</label>
+              <textarea id="notes" name="notes" rows="4"></textarea>
+
+              <input type="submit" value="Enviar reserva">
+          </form>
+          <p class="note">* Ens posarem en contacte amb tu per confirmar la reserva.</p>
+      </section>

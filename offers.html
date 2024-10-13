@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Massatges Fonoll</title>
+    <link rel="icon" href="imatges/favicon/m.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1 style="margin: 0; font-size: 2.61em; text-align: left; padding: 40px 40px 40px 40px; color:#FFFFFF">Massatges Fonoll
+                </h1>
+            </div>
+            <ul style="list-style: none; display: flex; margin: 0; padding: 0;">
+                <li style="margin-left: 20px;"><a href="#cart" style="color: white; text-decoration: gold;">Carret de Compra</a></li>
+                <li style="margin-left: 20px;"><a href="#contact" style="color: white; text-decoration: gold;">Contacte</a></li>
+                <li style="margin-left: 20px;"><a href="our-history.html" style="color: white; text-decoration: gold;">La nostra Història</a></li>
+                <li style="margin-left: 20px;"><a href="offers.html" style="color: white; text-decoration: gold;">Ofertes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="offers" class="RoundedSection">
+            <img style="width: 100%" src="imatges/seccions/ofertes.png">
+            <h2>Pack Gran</h2>
+            <ul>
+                <li>Massatge 15 minuts</li>
+                <li>Massatge 15 minuts</li>
+                <li>Música Relaxant</li>
+                <li>
+                    <div class="item-container">
+                        <span><strong>Preu:</strong> 8,00€ </span>
+                        <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
+                        <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
+                        <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
+                    </div>
+                </li>
+            </ul>
+            <p>* Cada massatge de 15 minuts és per una persona diferent.</p>
+            <p>* La música és aleatòria.</em></p>
+            <p>-------</p>
+
+            <h2>Pack Espluguí</h2>
+            <ul>
+                <li>Massatge 10 minuts</li>
+                <li>Extra 5 minuts esquena</li>
+                <li>Ventilador</li>
+                <li>Música Relaxant</li>
+                <li>Entrada Sorteig</li>
+                <li>AudioLlibre a escollir</li>
+                <li>
+                    <div class="item-container">
+                        <span><strong>Preu:</strong> 8,00€ </span>
+                        <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
+                        <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
+                        <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
+                    </div>
+                </li>
+            </ul>
+            <p>* Només per nascuts a l'Espluga.</em></p>
+            <p>-------</p>
+
+            <h2 style="display: inline-block; vertical-align: middle;">Pack Gironí</h2>
+            <img style="width: 80px; height: auto; float: right; margin-left: 0;" src="imatges/altres/discount10.png">
+            <ul>
+                <li>Massatge 30 minuts</li>
+                <li>Extra 5 minuts cap</li>
+                <li>Extra 5 minuts esquena</li>
+                <li>Extra 5 minuts peus</li>
+                <li>Aigua Freda</li>
+                <li>Tovallola Humida (calenta o freda)</li>
+                <li>Ventilador</li>
+                <li>
+                    <div class="item-container">
+                        <span><strong>Preu:</strong> 8,00€ </span>
+                        <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
+                        <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
+                        <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
+                    </div>
+                </li>
+                <p>-------</p>
+            </ul>
+        </section>
+    </div>

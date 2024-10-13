@@ -6,84 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.5">
     <title>Massatges Fonoll</title>
     <link rel="icon" href="imatges/favicon/m.ico" type="image/x-icon">
-    <style>
-        html {
-            scroll-behavior: smooth;
-            /* Efecte de desplaçament suau */
-        }
-        @font-face {
-            font-family: 'Agrandir';
-            src: url('fonts/agrandir.otf') format('opentype');
-        }
-        body {
-            font-family: Agrandir, sans-serif;
-            line-height: 0, 8;
-            margin: 0;
-            padding: 0;
-            background-color: #D5F9F9;
-            color: #333;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding-top: 140px;
-        }
-
-        h2 {
-            color: #333;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        h1 {
-            color: #333
-            font-size 1.35em;
-        }
-
-        .hours,.prices, .offers, .drink_shop, .addings, .discount, .contact, .shopping_cart, .reservation, .history {
-            background: #FFFFFF;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 25px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        div {
-            color: #333
-        }
-
-        ul {
-            padding: 0;
-        }
-
-        ul li {
-            padding: 5px 0;
-            list-style-type: none;
-            font-size: 1.35em;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-        button {
-            font-family: Agrandir, sans-serif;
-            font-size: 0.9em;
-        }
-
-        nav {
-            top: 0; background-size: cover; left: 0; background-position: left; background-image: url(imatges/capçalera/image-cover-massage-image-for-web-image-don\'t-use-for-comercial-use-all-rights-reserved.png); color: white; height: 120px; padding: 0px 20px; display: flex; justify-content: space-between; align-items: center;
-        }
-
-        header {
-            position: fixed;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -102,7 +25,7 @@
         </nav>
     </header>
     <div class="container">
-        <section class="hours">
+        <section class="RoundedSection">
             <img style="width: 100%" src="imatges/seccions/horari.png">
             <ul>
                 <li><strong>Dilluns - Dimarts - Dijous - Dissabte - Diumenge</strong></li>
@@ -111,7 +34,7 @@
             </ul>
         </section>
 
-        <section class="prices">
+        <section class="RoundedSection">
             <img style="width: 100%" src="imatges/seccions/temps.png">
             <ul>
                 <h2>Preus Normals</h2>
@@ -179,7 +102,7 @@
             </ul>
         </section>
 
-        <section class="addings">
+        <section class="RoundedSection">
             <img style="width: 100%" src="imatges/seccions/suplements.png">
             <ul>
                 <h2>Clàssics</h2>
@@ -309,7 +232,7 @@
             </ul>
         </section>
 
-        <section class="drink_shop">
+        <section class="RoundedSection">
             <img style="width: 100%" src="imatges/seccions/botiga.png">
             <ul>
                 <h2>Refrescos</h2>
@@ -462,69 +385,7 @@
                         </ul>
         </section>
 
-        <section id="offers" class="offers">
-            <img style="width: 100%" src="imatges/seccions/ofertes.png">
-            <li></li>-------</p>
-            <h2>Pack Gran</h2>
-            <ul>
-                <li>Massatge 15 minuts</li>
-                <li>Massatge 15 minuts</li>
-                <li>Música Relaxant</li>
-                <li>
-                    <div class="item-container">
-                        <span><strong>Preu:</strong> 8,00€ </span>
-                        <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
-                        <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
-                        <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
-                    </div>
-                </li>
-            </ul>
-            <li></li><em>* Cada massatge de 15 minuts és per una persona diferent.</em></p>
-            <li></li><em>* La música és aleatòria.</em></p>
-            <li></li>-------</p>
-
-            <h2>Pack Espluguí</h2>
-            <ul>
-                <li>Massatge 10 minuts</li>
-                <li>Extra 5 minuts esquena</li>
-                <li>Ventilador</li>
-                <li>Música Relaxant</li>
-                <li>Entrada Sorteig</li>
-                <li>AudioLlibre a escollir</li>
-                <li>
-                    <div class="item-container">
-                        <span><strong>Preu:</strong> 8,00€ </span>
-                        <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
-                        <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
-                        <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
-                    </div>
-                </li>
-            </ul>
-            <li></li><em>* Només per nascuts a l'Espluga.</em></p>
-            <li></li>-------</p>
-
-            <h2 style="display: inline-block; vertical-align: middle;">Pack Gironí</h2>
-            <img style="width: 80px; height: auto; float: right; margin-left: 0;" src="imatges/altres/discount10.png">
-            <ul>
-                <li>Massatge 30 minuts</li>
-                <li>Extra 5 minuts cap</li>
-                <li>Extra 5 minuts esquena</li>
-                <li>Extra 5 minuts peus</li>
-                <li>Aigua Freda</li>
-                <li>Tovallola Humida (calenta o freda)</li>
-                <li>Ventilador</li>
-                <li>
-                    <div class="item-container">
-                        <span><strong>Preu:</strong> 8,00€ </span>
-                        <button onclick="addToCart('Producte', 8.00)">Afegir al Carret</button>
-                        <span> | <strong>Preu Targeta:</strong> 6,65€ </span>
-                        <button onclick="addToCart('Producte', 6.65)">Afegir al Carret (Targeta)</button>
-                    </div>
-                </li>
-                <li></li>-------</p>
-            </ul>
-        </section>
-        <section class="discount" 
+        <section class="RoundedSection">
 
             <!-- Formulari per introduir el codi de descompte -->
             <form id="discountForm" onsubmit="return bescanviarCodi()">
@@ -551,7 +412,7 @@
             <p id="result"></p>
         </section>
 
-        <section id="cart" class="shopping_cart" <!-- Icona del carret -->
+        <section id="cart" class="RoundedSection" <!-- Icona del carret -->
             <img style="height: 75px" src="imatges/carret_de_compra/popup/cart-icon.png" alt="Carret de Compra"
                 class="cart-icon" onclick="toggleCartPopup()">
 
@@ -578,35 +439,14 @@
             </script>
         </section>
 
-        <section id="history" class="history">
-            <h1>La nostra història:</h1>
-            <ul>
-                <li>Situat en una tranquil·la cantonada d’un poble pintoresc, Massatges Fonoll és un refugi per a aquells que busquen alleugerir l'estrès del dia a dia. Amb una filosofia centrada en el benestar i la cura personal, aquesta empresa crea un ambient acollidor i tranquil que convida a l'autocura i la relaxació.</li>
-                <li>El local, decorat amb tonalitats suaus i materials naturals, transmet una sensació de calidesa i harmonia. Al moment d'entrar, els clients són rebuts per una suau aroma d’olis essencials i la melodia d’una música suau que flota a l'aire. Les parets, adornades amb fotografies de paisatges naturals, evoquen una connexió amb la natura, essencial per a l'experiència de Massatges Fonoll. Cada detall es pensa curosament per oferir un entorn de calma i serenor.</li>
-                <li>Massatges Fonoll ofereix una àmplia gamma de serveis dissenyats per satisfer les necessitats de cada client. Des de massatges tradicionals fins a teràpies més innovadores, cada tractament és realitzat per professionals formats que utilitzen tècniques especialitzades per ajudar a alliberar tensions i promoure la salut física i mental. El massatge terapèutic, per exemple, es centra en alleugerir el dolor muscular i millorar la circulació, mentre que el massatge de relaxació busca proporcionar una escapada del ritme frenètic de la vida moderna.</li>
-                <li>Una de les característiques distintives de Massatges Fonoll és la seva dedicació a la personalització dels serveis. Abans de cada sessió, es realitza una breu consulta per entendre les necessitats específiques de cada client, permetent adaptar el massatge a les seves preferències. Aquesta atenció al detall fa que cada experiència sigui única i satisfactòria, cosa que porta a un alt nivell de fidelització entre els clients.</li>
-                <li>A més, Massatges Fonoll incorpora l’ús d’ingredients naturals en les seves teràpies. Els olis essencials utilitzats durant els massatges són de qualitat superior i es seleccionen en funció de les necessitats individuals de cada client. La combinació de tècniques de massatge i aromateràpia potencia els efectes relaxants i revitalitzants del tractament, proporcionant una sensació de benestar total.</li>
-                <li>La sostenibilitat és també un dels pilars fonamentals de Massatges Fonoll. L'empresa utilitza materials ecològics en la decoració del local i promou pràctiques respectuoses amb el medi ambient. A més, col·labora amb proveïdors locals per garantir que els productes utilitzats siguin de la màxima qualitat i sostenibilitat.</li>
-                <li>Amb el pas del temps, Massatges Fonoll es consolida com un referent al barri. Els clients valoren no només la qualitat dels serveis, sinó també l’atenció personalitzada i l’ambient acollidor que fa que cada visita sigui una experiència memorable. Així, Massatges Fonoll esdevenen un espai on la gent pot escapar de l'estrès diari i reconnectar amb si mateixa, un veritable oasi de relaxació.</li>
-                <li>La popularitat de Massatges Fonoll continua creixent, i amb ella, la diversitat de serveis que ofereix. Amb el temps, l'empresa decideix introduir noves tècniques i teràpies que responen a les demandes dels clients i als últims avenços en el camp del benestar. Així, s’incorporen teràpies com el massatge en sec, que utilitza tècniques de fricció i pressió sense l’ús d’olis, i el massatge prenatal, dissenyat específicament per a dones embarassades, que ajuda a alleugerir les tensions i a promoure la relaxació.</li>
-                <li>Mentre els clients entren i surten del local, es nota un ambient de satisfacció i tranquil·litat. La fidelització dels clients es tradueix en un boca-orella efectiu, i molts nous visitants descobreixen Massatges Fonoll gràcies a les recomanacions dels seus amics i familiars. La relació de confiança que es crea entre els professionals del centre i els clients esdevé un dels actius més valuosos de l'empresa.</li>
-                <li>A més, Massatges Fonoll no només se centra en els massatges. L’empresa decideix organitzar tallers i xerrades sobre benestar i autocura, que aborden temes com la importància de la relaxació, l’alimentació saludable i les tècniques de respiració. Aquestes activitats no només ofereixen informació valuosa, sinó que també fomenten la creació d’una comunitat al voltant del benestar.</li>
-                <li>Amb el pas del temps, Massatges Fonoll s’adiu a les noves tecnologies. L'empresa desenvolupa una plataforma en línia que permet als clients reservar cita fàcilment, així com accedir a continguts exclusius, com vídeos de tècniques de relaxació i consells per a l'autocura. Aquesta iniciativa no només facilita la gestió de cites, sinó que també ajuda a mantenir els clients compromesos amb la seva salut i benestar.</li>
-                <li>La missió de Massatges Fonoll és clara: proporcionar un espai on els clients puguin desconnectar de les seves preocupacions quotidianes i reconnectar amb ells mateixos. Els professionals del centre continuen formant-se i actualitzant-se en tècniques noves per assegurar que cada massatge sigui una experiència única i revitalitzant. La formació contínua és un element essencial, ja que l'empresa es compromet a oferir només el millor als seus clients.</li>
-                <li>Amb el temps, Massatges Fonoll esdevé un referent no només al barri, sinó en tota la regió. Clients que venen de llocs llunyans per gaudir de les seves teràpies reconeixen l'impacte positiu que el centre té en la seva vida. La gent comença a parlar de Massatges Fonoll com un espai on el cos i la ment poden trobar l’equilibri necessari per afrontar els desafiaments del dia a dia.</li>
-                <li>Massatges Fonoll s'instal·la com un veritable oasi de relaxació i benestar. La seva dedicació a l'autocura, la sostenibilitat i la creació d'un ambient acollidor i tranquil són els ingredients clau que converteixen aquesta empresa en un destí desitjat per aquells que busquen moments de pau en un món cada cop més accelerat.</li>
-                <li>Amb una visió clara cap al futur, Massatges Fonoll es compromet a continuar evolucionant, adaptant-se a les necessitats dels seus clients i mantenint-se a l'avantguarda del sector del benestar. L'objectiu és clar: seguir sent un espai on la relaxació, la salut i la felicitat es troben en perfecta harmonia.</li>
-            </ul>
-        </section>
-
-        <section id="contact" class="contact"
+        <section id="contact" class="RoundedSection"
             <ul>
                 <h1 style="font-size: 3em; padding: 0px 20px;"><strong>Contacte</strong></h1>
             </ul>
             <img src="imatges/altres/contact image.png">
 
 <!-- CODI FORMULARI DE GOOGLE PER SI NO ES POT FER DESDE EL BOTÓ DE RESERVAR.
-        <section class="reservation">
+        <section class="RoundedSection">
             <h2>Contacte</h2>
             <li></li>Per a més informació o per reservar un massatge, omple el següent formulari</p>
             <form>
