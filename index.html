@@ -28,6 +28,7 @@
             width: 80%;
             margin: auto;
             overflow: hidden;
+            padding-top: 140px;
         }
 
         h2 {
@@ -37,7 +38,7 @@
         }
         h1 {
             color: #333
-            font-size: 1.35em;
+            font-size 1.35em;
         }
 
         .hours,.prices, .offers, .drink_shop, .addings, .discount, .contact, .shopping_cart, .reservation, .history {
@@ -73,20 +74,28 @@
             font-family: Agrandir, sans-serif;
             font-size: 0.9em;
         }
+
+        nav {
+            top: 0; background-size: cover; left: 0; background-position: left; background-image: url(imatges/capçalera/image-cover-massage-image-for-web-image-don\'t-use-for-comercial-use-all-rights-reserved.png); color: white; height: 120px; padding: 0px 20px; display: flex; justify-content: space-between; align-items: center;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <nav
-            style="top: 0; left: 0; background-position: left; background-image: url(imatges/capçalera/image-cover-massage-image-for-web-image-don\'t-use-for-comercial-use-all-rights-reserved.png); width: auto; color: white; height: 120px; padding: 0px 20px; display: flex; justify-content: space-between; align-items: center;">
+        <nav>
             <div>
                 <h1 style="margin: 0; font-size: 2.61em; text-align: left; padding: 40px 40px 40px 40px; color:#FFFFFF">Massatges Fonoll
                 </h1>
             </div>
             <ul style="list-style: none; display: flex; margin: 0; padding: 0;">
                 <li style="margin-left: 20px;"><a href="#cart" style="color: white; text-decoration: gold;">Carret de Compra</a></li>
-                <li style="margin-left: 20px;"><a href="#reservation" style="color: white; text-decoration: gold;">Contacte</a></li>
+                <li style="margin-left: 20px;"><a href="#contact" style="color: white; text-decoration: gold;">Contacte</a></li>
                 <li style="margin-left: 20px;"><a href="#history" style="color: white; text-decoration: gold;">La nostra Història</a></li>
                 <li style="margin-left: 20px;"><a href="#offers" style="color: white; text-decoration: gold;">Ofertes</a></li>
             </ul>
@@ -551,7 +560,7 @@
                 <h2>Carret de Compra</h2>
                 <div id="cartItems"></div>
                 <p id="total">Total: 0.00€</p>
-                <button class="close-btn" onclick="toggleCartPopup()">RESERVAR</button>
+                <button class="close-btn" onclick="window.location.href='reserve.html'">RESERVAR</button>
             </div>
             <!-- Incloure l'script -->
             <script src="cart.js"></script>
