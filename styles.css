@@ -15,6 +15,19 @@ body {
     color: #333;
 }
 
+.videos {
+    display: flex;
+    flex-wrap: wrap; /* Permet als elements passar a una nova fila si no hi ha espai */
+    justify-content: space-between; /* Distribueix espai entre els elements */
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.videos video {
+    margin: auto;
+}
+
 .container {
     width: 80%;
     margin: auto;

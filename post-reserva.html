@@ -1,0 +1,34 @@
+<?php
+// Recollim les dades del formulari
+$nom = htmlspecialchars($_POST['nom']);
+$email = htmlspecialchars($_POST['email']);
+$telefon = htmlspecialchars($_POST['telefon']);
+$data = htmlspecialchars($_POST['data']);
+$hora = htmlspecialchars($_POST['hora']);
+$persones = htmlspecialchars($_POST['persones']);
+$notes = htmlspecialchars($_POST['notes']);
+?>
+
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Massatges Fonoll - Reserva</title>
+    <link rel="icon" href="imatges/favicon/m.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <div class="container">
+            <h1>Gràcies per la teva reserva!</h1>
+            <p>La teva reserva ha estat rebuda correctament.</p>
+            <p>Ens posarem en contacte amb tu per confirmar els detalls de la reserva.</p>
+            <p>Si tens qualsevol dubte, pots contactar-nos a través del nostre correu electrònic o telèfon.</p>
+            <h2><strong>Detalls de la Reserva:</strong></h2>
+            <p><strong>Data de la reserva:</strong> <?php echo $data; ?></p>
+            <p><strong>Hora de la reserva:</strong> <?php echo $hora; ?></p>
+            <p><strong>Nombre de persones:</strong> <?php echo $persones; ?></p>
+            <p><strong>Comentaris:</strong> <?php echo $notes; ?></p>
+        </div>
+</body>
